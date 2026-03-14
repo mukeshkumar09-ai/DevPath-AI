@@ -1,8 +1,12 @@
 const express = require("express");
+const connectDB = require("./config/db");
 
 const projectRoutes = require("./routes/projectRoutes");
 
 const app = express();
+
+// CONNECT DATABASE
+connectDB();
 
 app.use(express.json());
 

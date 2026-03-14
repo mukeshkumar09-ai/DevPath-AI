@@ -17,3 +17,29 @@ exports.createProject = (req, res) => {
   });
 
 };
+
+
+exports.getProjects = (req, res) => {
+
+  const projects = [
+    {
+      idea: "Build a cloud security project",
+      roadmap: [
+        "Day 1: Setup environment",
+        "Day 2: Create backend",
+        "Day 3: Deploy project"
+      ]
+    },
+    {
+      idea: "Build a DevOps automation tool",
+      roadmap: [
+        "Day 1: Research tools",
+        "Day 2: Create scripts",
+        "Day 3: Test automation"
+      ]
+    }
+  ];
+
+  res.json(projects);
+
+};
