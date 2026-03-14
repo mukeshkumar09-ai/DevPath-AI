@@ -1,13 +1,9 @@
 const express = require("express");
+
 const router = express.Router();
 
-router.post("/create-project", (req, res) => {
-  const projectIdea = req.body.idea;
+const { createProject } = require("../controllers/projectController");
 
-  res.json({
-    message: "Project received",
-    idea: projectIdea
-  });
-});
+router.post("/create-project", createProject);
 
 module.exports = router;
